@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="style/css" href="main.css" />
+    <title>Users</title>
+    <style>
+      body {
+        overflow-x: scroll;
+      }
+
+      #userList {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .users {
+        background-color: blueviolet;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Pagina HTML bellissima</h1>
-    <script src="script.js"></script>
+    <h1 class="title">Users list:</h1>
+    <h3>Users registered on our database</h3>
+    <div id="userList"></div>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -18,7 +18,7 @@ router.get("/web", (req, res) => {
   console.log(__dirname);
   return res
     .status(200)
-    .sendFile(path.join(__dirname, "../dist/public", "index.html"));
+    .sendFile(path.join(__dirname, "/public", "index.html"));
 });
 
 router.get("/api/users", async (req, res) => {

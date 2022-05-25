@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = __importDefault(require("./server"));
 const PORT = process.env.port;
 const connection = server_1.default.listen(PORT, () => {
-    console.log("server is up on http://localhost:4000");
+    console.log("server is up on http://localhost:8000");
 });
 /*process.on("SIGINT", () => {
   connection.close(() => {

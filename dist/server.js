@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 require("dotenv/config");
 const router_1 = __importDefault(require("./router"));
 const app = (0, express_1.default)();
+app.use("/", express_1.default.static(__dirname + "/public"));
 app.use(express_1.default.json());
 app.use("/", router_1.default);
 exports.default = app;

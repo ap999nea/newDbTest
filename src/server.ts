@@ -5,7 +5,7 @@ import { dirname } from "path";
 
 const app = express();
 
-app.use("/radice", express.static(dirname + "../dist/public"));
+app.use("/", express.static(__dirname + "/public"));
 
 app.use(express.json());
 
