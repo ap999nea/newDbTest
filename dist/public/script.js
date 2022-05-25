@@ -2,16 +2,16 @@
 
 const request = new XMLHttpRequest();
 
-request.open("GET", "/api/users", true);
+request.open("GET", "http://localhost:8000/api/users", true);
 
 let users;
 
 request.onreadystatechange = () => {
   if (request.readyState == 4) {
     try {
-      users = JSON.parse(request.response);
-      function createDiv(users) {
-        let myDiv = document.getElementById("userList");
+      users = JSON.parse(request.response); // Mi ritorna un array
+      const selectDiv = (users) => {
+        let div = document.getElementById("userList");
 
         let usersHtml = "";
         users.forEach((element) => {
@@ -19,9 +19,9 @@ request.onreadystatechange = () => {
             usersHtml + "<div class = 'users'>" + element.username + "</div>";
         });
 
-        myDiv.innerHTML = usersHtml;
-      }
-      createDiv(users);
+        div.innerHTML = usersHtml;
+      };
+      selectDiv(users);
       return users.forEach((users) => console.log("My users, ", users));
     } catch (error) {
       return console.log({ msg: "Cannot connect to server" });
